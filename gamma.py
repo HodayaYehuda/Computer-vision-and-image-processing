@@ -61,7 +61,7 @@ def temp(i):
 
 
 def main():
-    gammaDisplay('test.txt', 2)
+    gammaDisplay('testImage1.jpg', 2)
 
 
 if __name__ == '__main__':
