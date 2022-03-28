@@ -1,0 +1,44 @@
+PYTHON VERSION: 3.10
+PLATFORM: pyCharm, windows
+
+imReadAndConvert-
+ Reads an image, and returns the image converted as requested (gray or rgb)
+
+imDisplay-
+ Reads an image as RGB or GRAY_SCALE and displays it
+
+transformRGB2YIQ-
+Converts an RGB image to YIQ color space by multiplex the image at the matrix:
+    [0.299, 0.587, 0.114],
+    [0.596, -0.275, -0.321],
+    [0.212, -0.523, 0.311]]
+
+
+transformYIQ2RGB-
+Converts an YIQ image to RGB color space by multiplex the image at the reverse matrix:
+    [0.299, 0.587, 0.114],
+    [0.596, -0.275, -0.321],
+    [0.212, -0.523, 0.311]]
+
+
+hsitogramEqualize-
+Equalizes the histogram of an image.
+The function return imgEq, histOrg, histEQ bt the steps:
+transform to yiq (for rgb format)
+Calculate the normalized
+Calculate the image histogram
+Calculate the normalized Cumulative Sum (CumSum)
+Calculate the cumSum histogram
+
+
+quantizeImage-
+The function calculate quantize cy sending the pic to the function:
+quantizeImage_gray or quantizeImage_rgb.
+the function (to the right image) calculate quantize by the steps:
+create image cumSum
+add to list size of every interval (by the function finding Q)
+find all limits (by the function finding Z)
+add mse and quantize to final list (by the function: image_update that create new array with the updates colors, mse)
+
+
+
